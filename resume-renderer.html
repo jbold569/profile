@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Jason Bolden</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.28;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px 50px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 3px solid #2c3e50;
+    }
+
+    h1 {
+      font-size: 1.875em;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .contact-info a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-icon {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+      margin-right: 4px;
+      fill: currentColor;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.125em;
+      color: #2c3e50;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ecf0f1;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Profile */
+    .profile {
+      font-size: 1.05em;
+      line-height: 1.44;
+      color: #555;
+      text-align: justify;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .skill-category h3 {
+      font-size: 0.825em;
+      color: #34495e;
+      margin-bottom: 10px;
+    }
+
+    .skill-category ul {
+      list-style: none;
+    }
+
+    .skill-category li {
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .skill-category li:before {
+      content: "▪";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 25px;
+    }
+
+    .job-header {
+      margin-bottom: 10px;
+    }
+
+    .job-title {
+      font-size: 0.9em;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .job-company {
+      font-size: 1.1em;
+      color: #555;
+      font-style: italic;
+    }
+
+    .job-date {
+      color: #777;
+      font-size: 0.95em;
+    }
+
+    .job-highlights {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .job-highlights li {
+      padding: 5px 0;
+      padding-left: 25px;
+      position: relative;
+      line-height: 1.28;
+    }
+
+    .job-highlights li:before {
+      content: "•";
+      position: absolute;
+      left: 10px;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    /* Education */
+    .education-item {
+      margin-bottom: 20px;
+    }
+
+    .education-header {
+      font-weight: bold;
+      color: #2c3e50;
+      font-size: 1.1em;
+    }
+
+    .education-details {
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .courses {
+      list-style: none;
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+
+    .courses li {
+      padding: 3px 0;
+      color: #666;
+    }
+
+    /* Certification Links */
+    .skill-category a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .skill-category a:hover {
+      text-decoration: underline;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        font-size: 9.5pt;
+        line-height: 1.2;
+      }
+
+      .container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      /* Header */
+      header {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+      }
+
+      h1 {
+        font-size: 16pt;
+        margin-bottom: 4px;
+      }
+
+      /* Contact */
+      .contact-info {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        font-size: 8.5pt;
+      }
+
+      .contact-info span {
+        white-space: nowrap;
+      }
+
+      .contact-icon {
+        width: 11px;
+        height: 11px;
+        fill: #333;
+      }
+
+      /* Links */
+      a {
+        color: #333 !important;
+        text-decoration: none !important;
+      }
+
+      /* Section headings */
+      h2 {
+        font-size: 11pt;
+        margin-bottom: 6px;
+        padding-bottom: 3px;
+      }
+
+      /* Sections — allow breaks inside large sections like Experience */
+      section {
+        margin-bottom: 8px;
+        page-break-inside: auto;
+      }
+
+      /* Keep individual jobs together */
+      .job {
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .job-header {
+        margin-bottom: 4px;
+      }
+
+      .job-title {
+        font-size: 9.5pt;
+      }
+
+      .job-company {
+        font-size: 10pt;
+      }
+
+      .job-date {
+        font-size: 8.5pt;
+      }
+
+      /* Profile */
+      .profile {
+        font-size: 9.5pt;
+        line-height: 1.3;
+      }
+
+      /* Bullet points */
+      .job-highlights {
+        margin-top: 4px;
+      }
+
+      .job-highlights li {
+        padding: 1.5px 0;
+        padding-left: 20px;
+        line-height: 1.22;
+      }
+
+      .job-highlights li:before {
+        left: 8px;
+        color: #333;
+      }
+
+      /* Skills */
+      .skill-category h3 {
+        font-size: 9pt;
+        margin-bottom: 2px;
+      }
+
+      .skill-category li {
+        padding: 1px 0;
+        padding-left: 16px;
+      }
+
+      /* Technical skills grid — override inline styles */
+      .skill-category + div {
+        margin-top: 6px !important;
+      }
+
+      .skill-category + div > div {
+        margin-bottom: 2px !important;
+        line-height: 1.22 !important;
+      }
+
+      /* Education */
+      .education-item {
+        margin-bottom: 8px;
+      }
+
+      .education-header {
+        font-size: 10pt;
+      }
+
+      .education-details {
+        margin-top: 2px;
+      }
+
+      .courses {
+        margin-top: 4px;
+        padding-left: 16px;
+      }
+
+      .courses li {
+        padding: 1px 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="resume"></div>
+
+  <script>
+    // Your resume data
+    const resumeData = {
+      "personal": {
+        "name": "Jason Bolden",
+        "location": {
+          "address": "5607 NE 202nd Pl",
+          "city": "Kenmore",
+          "state": "Washington",
+          "zip": "98028"
+        },
+        "contact": {
+          "phone": "817-937-1709",
+          "email": "jason.bolden569@gmail.com",
+          "linkedin": "https://www.linkedin.com/in/jason-bolden-37b55443",
+          "github": "https://github.com/jbold569",
+          "website": ""
+        }
+      },
+      "profile": "Cybersecurity leader with 12+ years building and scaling security programs across diverse industries \u2014 from legacy enterprise to startup to big tech. Applies an engineering mentality to technology systems, business programs, and people management alike, transforming detection platforms, incident response capabilities, and structured talent development programs into compounding operational advantage. Bridges security operations with software delivery and business objectives, building programs that enable organizational velocity rather than impede it.",
+      "skills": {
+        "certifications": [
+          {
+            "name": "GIAC Security Leadership Certification",
+            "abbreviation": "GSLC",
+            "issuer": "GIAC",
+            "date": null,
+            "expirationDate": null,
+            "url": "https://www.credly.com/badges/3da706d5-a025-43d5-a6ba-e015448fe121/public_url"
+          },
+          {
+            "name": "GIAC Certified Incident Handler",
+            "abbreviation": "GCIH",
+            "issuer": "GIAC",
+            "date": null,
+            "expirationDate": null,
+            "url": "https://www.credly.com/badges/a721525c-3649-484a-abf1-9546ffe5bc19/public_url"
+          },
+          {
+            "name": "GIAC Security Operations Manager",
+            "abbreviation": "GSOM",
+            "issuer": "GIAC",
+            "date": null,
+            "expirationDate": null,
+            "url": "https://www.credly.com/badges/8dd182e3-07c0-42ab-81f3-7e0b366519dd/public_url"
+          },
+          {
+            "name": "GIAC Strategic Planning, Policy, and Leadership",
+            "abbreviation": "GSTRT",
+            "issuer": "GIAC",
+            "date": null,
+            "expirationDate": null,
+            "url": "https://www.credly.com/badges/7be4e234-a4d9-4400-8e1a-70738ae36367/public_url"
+          }
+        ],
+        "technical": {
+          "platforms": ["AWS", "Azure", "Cloudera/Hadoop"],
+          "tools": ["Splunk", "CrowdStrike", "Palo Alto XSOAR", "ThreatConnect", "SafeBreach", "Amazon Bedrock", "Cline", "Jira"],
+          "languages": ["Python", "SQL", "SPL", "Bash", "PowerShell", "TypeScript", "JavaScript", "Java"],
+          "domains": ["Incident Response", "Detection Engineering", "Security Operations", "Data Systems", "Generative AI & Automation", "Staff Development & Training", "Program & Portfolio Management"]
+        }
+      },
+      "experience": [
+        {
+          "title": "Manager \u2013 Cloud Security Response (CloudSec)",
+          "company": "Amazon Web Services",
+          "location": "Seattle, WA",
+          "startDate": "2022-11",
+          "endDate": null,
+          "current": true,
+          "highlights": [
+            "Led a 10-person incident response team triaging and remediating security issues impacting AWS services and customers, supporting a 25-engineer oncall rotation handling 300+ delegated issues daily",
+            "Developed a Training and Knowledge Management (TKM) program serving 70 engineers across 4 global sites, defining baseline and specialty training requirements with a framework for quantifying return on training investments",
+            "Strengthened Cloud Security Response\u2019s partnership with the Legal organization through tooling enhancements and structured feedback mechanisms",
+            "Guided career progression of 60% of direct reports and drove changes to coaching methods for at-risk staff, emphasizing a balanced approach to feedback delivery",
+            "Drove FedRAMP and HITRUST compliance readiness across incident response \u2014 updating response plans, automating regulatory scoping tools, standardizing responder training and compliance attestation, and developing AI-assisted tabletop exercises to validate response to regulatory scenarios",
+            "Co-developed purple team exercises executing 4 scenarios annually for 70 engineers globally, driving improvements in scenario documentation, kill chain mapping, and remedial training alignment \u2014 ultimately transitioning exercise delivery to a third-party training vendor, freeing senior engineer capacity and aligning content development with an industry leader",
+            "Spearheaded hiring for the Seattle site, securing accepted offers for 100% of 2023 open headcount and growing the team by 60%",
+            "Architected generative AI agent personas for program management using Amazon Bedrock and Claude, automating program goal alignment, task decomposition, and delivery artifact generation \u2014 saving dozens of hours in planning cycles and 5 hours weekly per engineer in administrative overhead",
+            "Organized a global AI upskilling initiative for 70 engineers, developing standard operating procedures, KPIs, and automated dashboards to achieve 100% training compliance within 2 months through a train-the-trainer model and learning management system integration",
+            "Led site-level learning sessions on prompt engineering, context engineering, and AI-assisted development while integrating AI tooling with incident management systems to accelerate context gathering, engineer performance analysis, and trend identification"
+          ]
+        },
+        {
+          "title": "Manager \u2013 Cybersecurity Incident Response (CIRT)",
+          "company": "Cruise, LLC",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "2022-08",
+          "current": false,
+          "highlights": [
+            "Orchestrated the relationship with an external incident response partner, integrating them into team cadences, check-ins, and product roadmap reviews",
+            "Led a global security operations team across 3 time zones (US Central, US Pacific, Sydney) to support a \"follow the sun\" model",
+            "Established a formal operations review and retrospective process to support continuous improvement and guide backlog prioritization",
+            "Partnered with the internal compliance team to remediate open control gaps in incident response procedures",
+            "Coordinated evaluation of 3 Security Orchestration, Automation, and Response (SOAR) providers, leading to a time-boxed proof of technology for the top 2 solutions",
+            "Formalized the release planning process by providing a framework for CIRT engineers to scope initiatives, identify supporting peers, denote dependent teams, and jump start work decomposition",
+            "Defined high level CIRT services to better convey the alignment of security and company objectives",
+            "Created training plans for 3 newly defined roles within CIRT to clearly denote requirements and facilitate career growth of Cruisers interested in the team"
+          ]
+        },
+        {
+          "title": "Manager \u2013 Cybersecurity Incident Response Engineering (CIRE)",
+          "company": "American Airlines",
+          "location": "Fort Worth, TX",
+          "startDate": "2019-09",
+          "endDate": "2022-03",
+          "current": false,
+          "highlights": [
+            "Stewarded a $7 million technology portfolio through an unprecedented economic downturn while maintaining pace and efficacy",
+            "Led strategy and implementation for the migration to a next-gen cloud-hosted Security Information and Event Management (SIEM) platform resulting in a 92% increase in logging coverage, $1.3 million in savings annually, enhanced behavior-based analytics via AI, and expanded use cases into fraud and insider threat",
+            "Reduced 80% of phishing incidents by upgrading email protection gateway to a more efficient cloud-based solution",
+            "Migrated off inadequate Endpoint Detection and Response (EDR) and antivirus solutions to CrowdStrike EDR/Endpoint Protection Platform (EPP) over the course of 1 month increasing enterprise coverage to 98% (~70k endpoints) consolidating capability under one platform saving 30% of engineering resources",
+            "Acquired and deployed the first adversary emulation platform in 2 months, enhancing the detection engineering process by automating testing/validation procedures and aiding in false positive reduction",
+            "Delivered weekly updates to executive management across Cybersecurity, IT, and Legal regularly on developments in maturity and the success of the security operations program",
+            "Modernized the Security Operations Center (SOC), leading automation of incident response and threat hunting by implementing the first Threat Intelligence Platform (TIP) and Security Orchestration, Automation, and Response (SOAR) solutions enabling repeatable response actions and consistent metrics to report the efficacy of the programs",
+            "Created a program involving multi-modal teams that proactively measure and improve detection and response capabilities of security operations",
+            "Eliminated silos between engineers and other cross-functional groups, resulting in improved team collaboration, feature delivery, and tactical use of resources",
+            "Fostered an environment to grow top-tier security operations talent that allowed analysts to expand their roles and engineering staff to develop into leaders; giving them a competitive advantage internally and externally"
+          ]
+        },
+        {
+          "title": "Sr. Architect \u2013 Situational Awareness Engineering (SAE)",
+          "company": "American Airlines",
+          "location": "Fort Worth, TX",
+          "startDate": "2017-09",
+          "endDate": "2019-09",
+          "current": false,
+          "highlights": [
+            "Designed, architected, and implemented the enterprise-standard log transport platform for all of IT, processing multiple terabytes daily from dozens of source systems in near real-time across on-premise and cloud environments",
+            "Developed a data-conscious culture across application teams with a self-serviced Log Transport Utility (LTU) to increase data fidelity under volume-based licensing and reduce frivolous scaling of consuming services",
+            "Redefined customer engagement process to reduce direct interaction between clients and engineers to focus time and efforts on service delivery rather than requirement gathering",
+            "Eliminated barriers previously held through tribal knowledge by cross training, delegating tasks, introducing new tools, and documenting service support to diversify team skills and reduce disruption due to availability",
+            "Empowered application teams to consume logging and event correlation services at their own pace by utilizing LTU; removing SAE resources as a bottleneck for service delivery and focusing on platform improvement",
+            "Led dozens of cross-domain teams across IT through re-tooling log management services to a more cost-effective, enterprise-grade technology stack",
+            "Accelerated team maturity in the adoption of Agile methods and practices"
+          ]
+        },
+        {
+          "title": "Business Intelligence Developer \u2013 AA.com Data Analytics",
+          "company": "American Airlines",
+          "location": "Fort Worth, TX",
+          "startDate": "2013-07",
+          "endDate": "2017-08",
+          "current": false,
+          "highlights": [
+            "Served as the enterprise subject matter expert for the Cloudera technology stack at American Airlines",
+            "Integrated services that created applications to process data from ingestion to presentation",
+            "Designed a Fraud Investigation System that replaced an existing tool to recover $9 million in annual revenue",
+            "Partnered with departments across the enterprise as a data liaison, translating business requirements into Big Data platform capabilities"
+          ]
+        }
+      ],
+      "education": [
+        {
+          "institution": "Texas A&M University",
+          "location": "College Station, Texas",
+          "degree": "Bachelor of Science",
+          "field": "Computer Engineering",
+          "honors": "with Honors",
+          "graduationDate": "2013-05",
+          "gpa": null
+        },
+        {
+          "institution": "SANS Institute",
+          "location": "",
+          "degree": "Professional Training",
+          "field": "Cybersecurity",
+          "courses": [
+            "MGT 514: Planning, Policy, and Leadership",
+            "MGT 551: Building and Leading Security Operations Centers",
+            "SEC 504: Hacker Tools, Techniques, Exploits, and Incident Handling",
+            "MGT 512: Security Leadership Essentials for Managers"
+          ],
+          "graduationDate": null
+        }
+      ]
+    };
+
+    function formatDate(dateStr) {
+      if (!dateStr) return 'Present';
+      const [year, month] = dateStr.split('-');
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      return `${months[parseInt(month) - 1]} ${year}`;
+    }
+
+    function renderResume(data) {
+      const container = document.getElementById('resume');
+      
+      // Extract usernames from profile URLs
+      const linkedinUser = data.personal.contact.linkedin
+        ? data.personal.contact.linkedin.replace(/\/$/, '').split('/').pop()
+        : '';
+      const githubUser = data.personal.contact.github
+        ? data.personal.contact.github.replace(/\/$/, '').split('/').pop()
+        : '';
+
+      // Inline SVG icons (16x16, currentColor fill for print compatibility)
+      const linkedinIcon = `<svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`;
+      const githubIcon = `<svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>`;
+
+      // Header
+      let html = `
+        <header>
+          <h1>${data.personal.name}</h1>
+          <div class="contact-info">
+            <span>${data.personal.location.city}, ${data.personal.location.state}</span>
+            <span>${data.personal.contact.phone}</span>
+            <span><a href="mailto:${data.personal.contact.email}">${data.personal.contact.email}</a></span>
+            ${data.personal.contact.linkedin ? `<span><a href="${data.personal.contact.linkedin}" target="_blank">${linkedinIcon}${linkedinUser}</a></span>` : ''}
+            ${data.personal.contact.github ? `<span><a href="${data.personal.contact.github}" target="_blank">${githubIcon}${githubUser}</a></span>` : ''}
+          </div>
+        </header>
+      `;
+
+      // Profile
+      html += `
+        <section>
+          <h2>Professional Profile</h2>
+          <p class="profile">${data.profile}</p>
+        </section>
+      `;
+
+      // Skills
+      html += `
+        <section>
+          <h2>Skills</h2>
+          <div class="skill-category">
+            <h3>Certifications</h3>
+            <ul>
+              ${data.skills.certifications.map(cert => 
+                `<li>${cert.name} (${cert.url ? `<a href="${cert.url}" target="_blank">${cert.abbreviation}</a>` : cert.abbreviation})</li>`
+              ).join('')}
+            </ul>
+          </div>
+          ${(() => {
+            const tech = data.skills.technical;
+            const rows = [
+              { label: 'Platforms', items: tech.platforms },
+              { label: 'Tools', items: tech.tools },
+              { label: 'Languages', items: tech.languages },
+              { label: 'Domains', items: tech.domains }
+            ].filter(row => row.items && row.items.length > 0);
+            if (rows.length === 0) return '';
+            return '<div style="margin-top: 20px;">' +
+              rows.map(row =>
+                '<div style="margin-bottom: 8px; line-height: 1.44;">' +
+                  '<strong style="color: #34495e; font-size: 0.825em;">' + row.label + '</strong> ' +
+                  '<span style="color: #555;">' + row.items.join(' \u00b7 ') + '</span>' +
+                '</div>'
+              ).join('') +
+            '</div>';
+          })()}
+        </section>
+      `;
+
+      // Experience
+      html += `
+        <section>
+          <h2>Experience</h2>
+          ${data.experience.map(job => `
+            <div class="job">
+              <div class="job-header">
+                <div class="job-title">${job.title}</div>
+                <div class="job-company">${job.company}</div>
+                <div class="job-date">${formatDate(job.startDate)} – ${formatDate(job.endDate)}</div>
+              </div>
+              <ul class="job-highlights">
+                ${job.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
+              </ul>
+            </div>
+          `).join('')}
+        </section>
+      `;
+
+      // Education
+      html += `
+        <section>
+          <h2>Education</h2>
+          ${data.education.map(edu => `
+            <div class="education-item">
+              <div class="education-header">
+                ${edu.institution}${edu.location ? `, ${edu.location}` : ''}
+              </div>
+              <div class="education-details">
+                ${edu.degree}${edu.field ? ` in ${edu.field}` : ''}${edu.honors ? ` ${edu.honors}` : ''}
+                ${edu.graduationDate ? ` – ${formatDate(edu.graduationDate)}` : ''}
+              </div>
+              ${edu.courses ? `
+                <ul class="courses">
+                  ${edu.courses.map(course => `<li>${course}</li>`).join('')}
+                </ul>
+              ` : ''}
+            </div>
+          `).join('')}
+        </section>
+      `;
+
+      container.innerHTML = html;
+    }
+
+    // Render the resume
+    renderResume(resumeData);
+  </script>
+</body>
+</html>

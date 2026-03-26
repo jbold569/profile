@@ -1,0 +1,176 @@
+{
+  "personal": {
+    "name": "Jason Bolden",
+    "location": {
+      "address": "5607 NE 202nd Pl",
+      "city": "Kenmore",
+      "state": "Washington",
+      "zip": "98028"
+    },
+    "contact": {
+      "phone": "817-937-1709",
+      "email": "jason.bolden569@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/jason-bolden-37b55443",
+      "github": "https://github.com/jbold569",
+      "website": ""
+    }
+  },
+  "profile": "Cybersecurity leader with 12+ years building and scaling security programs across diverse industries — from legacy enterprise to startup to big tech. Applies an engineering mentality to technology systems, business programs, and people management alike, transforming detection platforms, incident response capabilities, and structured talent development programs into compounding operational advantage. Bridges security operations with software delivery and business objectives, building programs that enable organizational velocity rather than impede it.",
+  "skills": {
+    "certifications": [
+      {
+        "name": "GIAC Security Leadership Certification",
+        "abbreviation": "GSLC",
+        "issuer": "GIAC",
+        "date": null,
+        "expirationDate": null,
+        "url": "https://www.credly.com/badges/3da706d5-a025-43d5-a6ba-e015448fe121/public_url"
+      },
+      {
+        "name": "GIAC Certified Incident Handler",
+        "abbreviation": "GCIH",
+        "issuer": "GIAC",
+        "date": null,
+        "expirationDate": null,
+        "url": "https://www.credly.com/badges/a721525c-3649-484a-abf1-9546ffe5bc19/public_url"
+      },
+      {
+        "name": "GIAC Security Operations Manager",
+        "abbreviation": "GSOM",
+        "issuer": "GIAC",
+        "date": null,
+        "expirationDate": null,
+        "url": "https://www.credly.com/badges/8dd182e3-07c0-42ab-81f3-7e0b366519dd/public_url"
+      },
+      {
+        "name": "GIAC Strategic Planning, Policy, and Leadership",
+        "abbreviation": "GSTRT",
+        "issuer": "GIAC",
+        "date": null,
+        "expirationDate": null,
+        "url": "https://www.credly.com/badges/7be4e234-a4d9-4400-8e1a-70738ae36367/public_url"
+      }
+    ],
+    "technical": {
+      "platforms": ["AWS", "Azure", "Cloudera/Hadoop"],
+      "tools": ["Splunk", "CrowdStrike", "Palo Alto XSOAR", "ThreatConnect", "SafeBreach", "Amazon Bedrock", "Cline", "Jira"],
+      "languages": ["Python", "SQL", "SPL", "Bash", "PowerShell", "TypeScript", "JavaScript", "Java"],
+      "domains": ["Incident Response", "Detection Engineering", "Security Operations", "Data Systems", "Generative AI & Automation", "Staff Development & Training", "Program & Portfolio Management"]
+    }
+  },
+  "experience": [
+    {
+      "title": "Manager – Cloud Security Response (CloudSec)",
+      "company": "Amazon Web Services",
+      "location": "Seattle, WA",
+      "startDate": "2022-11",
+      "endDate": null,
+      "current": true,
+      "highlights": [
+        "Led a 10-person incident response team triaging and remediating security issues impacting AWS services and customers, supporting a 25-engineer oncall rotation handling 300+ delegated issues daily",
+        "Developed a Training and Knowledge Management (TKM) program serving 70 engineers across 4 global sites, defining baseline and specialty training requirements with a framework for quantifying return on training investments",
+        "Strengthened Cloud Security Response's partnership with the Legal organization through tooling enhancements and structured feedback mechanisms",
+        "Guided career progression of 60% of direct reports and drove changes to coaching methods for at-risk staff, emphasizing a balanced approach to feedback delivery",
+        "Drove FedRAMP and HITRUST compliance readiness across incident response — updating response plans, automating regulatory scoping tools, standardizing responder training and compliance attestation, and developing AI-assisted tabletop exercises to validate response to regulatory scenarios",
+        "Co-developed purple team exercises executing 4 scenarios annually for 70 engineers globally, driving improvements in scenario documentation, kill chain mapping, and remedial training alignment — ultimately transitioning exercise delivery to a third-party training vendor, freeing senior engineer capacity and aligning content development with an industry leader",
+        "Spearheaded hiring for the Seattle site, securing accepted offers for 100% of 2023 open headcount and growing the team by 60%",
+        "Architected generative AI agent personas for program management using Amazon Bedrock and Claude, automating program goal alignment, task decomposition, and delivery artifact generation — saving dozens of hours in planning cycles and 5 hours weekly per engineer in administrative overhead",
+        "Organized a global AI upskilling initiative for 70 engineers, developing standard operating procedures, KPIs, and automated dashboards to achieve 100% training compliance within 2 months through a train-the-trainer model and learning management system integration",
+        "Led site-level learning sessions on prompt engineering, context engineering, and AI-assisted development while integrating AI tooling with incident management systems to accelerate context gathering, engineer performance analysis, and trend identification"
+      ]
+    },
+    {
+      "title": "Manager – Cybersecurity Incident Response (CIRT)",
+      "company": "Cruise, LLC",
+      "location": "Remote",
+      "startDate": "2022-03",
+      "endDate": "2022-08",
+      "current": false,
+      "highlights": [
+        "Orchestrated the relationship with an external incident response partner, integrating them into team cadences, check-ins, and product roadmap reviews",
+        "Led a global security operations team across 3 time zones (US Central, US Pacific, Sydney) to support a \"follow the sun\" model",
+        "Established a formal operations review and retrospective process to support continuous improvement and guide backlog prioritization",
+        "Partnered with the internal compliance team to remediate open control gaps in incident response procedures",
+        "Coordinated evaluation of 3 Security Orchestration, Automation, and Response (SOAR) providers, leading to a time-boxed proof of technology for the top 2 solutions",
+        "Formalized the release planning process by providing a framework for CIRT engineers to scope initiatives, identify supporting peers, denote dependent teams, and jump start work decomposition",
+        "Defined high level CIRT services to better convey the alignment of security and company objectives",
+        "Created training plans for 3 newly defined roles within CIRT to clearly denote requirements and facilitate career growth of Cruisers interested in the team"
+      ]
+    },
+    {
+      "title": "Manager – Cybersecurity Incident Response Engineering (CIRE)",
+      "company": "American Airlines",
+      "location": "Fort Worth, TX",
+      "startDate": "2019-09",
+      "endDate": "2022-03",
+      "current": false,
+      "highlights": [
+        "Stewarded a $7 million technology portfolio through an unprecedented economic downturn while maintaining pace and efficacy",
+        "Led strategy and implementation for the migration to a next-gen cloud-hosted Security Information and Event Management (SIEM) platform resulting in a 92% increase in logging coverage, $1.3 million in savings annually, enhanced behavior-based analytics via AI, and expanded use cases into fraud and insider threat",
+        "Reduced 80% of phishing incidents by upgrading email protection gateway to a more efficient cloud-based solution",
+        "Migrated off inadequate Endpoint Detection and Response (EDR) and antivirus solutions to CrowdStrike EDR/Endpoint Protection Platform (EPP) over the course of 1 month increasing enterprise coverage to 98% (~70k endpoints) consolidating capability under one platform saving 30% of engineering resources",
+        "Acquired and deployed the first adversary emulation platform in 2 months, enhancing the detection engineering process by automating testing/validation procedures and aiding in false positive reduction",
+        "Delivered weekly updates to executive management across Cybersecurity, IT, and Legal regularly on developments in maturity and the success of the security operations program",
+        "Modernized the Security Operations Center (SOC), leading automation of incident response and threat hunting by implementing the first Threat Intelligence Platform (TIP) and Security Orchestration, Automation, and Response (SOAR) solutions enabling repeatable response actions and consistent metrics to report the efficacy of the programs",
+        "Created a program involving multi-modal teams that proactively measure and improve detection and response capabilities of security operations",
+        "Eliminated silos between engineers and other cross-functional groups, resulting in improved team collaboration, feature delivery, and tactical use of resources",
+        "Fostered an environment to grow top-tier security operations talent that allowed analysts to expand their roles and engineering staff to develop into leaders; giving them a competitive advantage internally and externally"
+      ]
+    },
+    {
+      "title": "Sr. Architect – Situational Awareness Engineering (SAE)",
+      "company": "American Airlines",
+      "location": "Fort Worth, TX",
+      "startDate": "2017-09",
+      "endDate": "2019-09",
+      "current": false,
+      "highlights": [
+        "Designed, architected, and implemented the enterprise-standard log transport platform for all of IT, processing multiple terabytes daily from dozens of source systems in near real-time across on-premise and cloud environments",
+        "Developed a data-conscious culture across application teams with a self-serviced Log Transport Utility (LTU) to increase data fidelity under volume-based licensing and reduce frivolous scaling of consuming services",
+        "Redefined customer engagement process to reduce direct interaction between clients and engineers to focus time and efforts on service delivery rather than requirement gathering",
+        "Eliminated barriers previously held through tribal knowledge by cross training, delegating tasks, introducing new tools, and documenting service support to diversify team skills and reduce disruption due to availability",
+        "Empowered application teams to consume logging and event correlation services at their own pace by utilizing LTU; removing SAE resources as a bottleneck for service delivery and focusing on platform improvement",
+        "Led dozens of cross-domain teams across IT through re-tooling log management services to a more cost-effective, enterprise-grade technology stack",
+        "Accelerated team maturity in the adoption of Agile methods and practices"
+      ]
+    },
+    {
+      "title": "Business Intelligence Developer – AA.com Data Analytics",
+      "company": "American Airlines",
+      "location": "Fort Worth, TX",
+      "startDate": "2013-07",
+      "endDate": "2017-08",
+      "current": false,
+      "highlights": [
+        "Served as the enterprise subject matter expert for the Cloudera technology stack at American Airlines",
+        "Integrated services that created applications to process data from ingestion to presentation",
+        "Designed a Fraud Investigation System that replaced an existing tool to recover $9 million in annual revenue",
+        "Partnered with departments across the enterprise as a data liaison, translating business requirements into Big Data platform capabilities"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Texas A&M University",
+      "location": "College Station, Texas",
+      "degree": "Bachelor of Science",
+      "field": "Computer Engineering",
+      "honors": "with Honors",
+      "graduationDate": "2013-05",
+      "gpa": null
+    },
+    {
+      "institution": "SANS Institute",
+      "location": "",
+      "degree": "Professional Training",
+      "field": "Cybersecurity",
+      "courses": [
+        "MGT 514: Planning, Policy, and Leadership",
+        "MGT 551: Building and Leading Security Operations Centers",
+        "SEC 504: Hacker Tools, Techniques, Exploits, and Incident Handling",
+        "MGT 512: Security Leadership Essentials for Managers"
+      ],
+      "graduationDate": null
+    }
+  ]
+}
